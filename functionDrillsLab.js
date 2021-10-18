@@ -4,7 +4,7 @@
   Call the function.
 */
 
-function helloWorld () {
+function helloWorld() {
   console.log("Hello, World!")
 }
 helloWorld()
@@ -18,7 +18,11 @@ helloWorld()
   Call the function, passing in an argument.
 */
 
-//CODE HERE
+function printName() {
+  let name = "Blake"
+  console.log(name)
+}
+printName()
 
 
 ////////////////// PROBLEM 3 ////////////////////
@@ -32,7 +36,11 @@ helloWorld()
   Make sure to call your function and pass in an argument.
 */
 
-//CODE HERE
+function greeting(name) {
+  const stringName = String(name)
+  console.log(`Hello, ${stringName}`)
+}
+greeting("Blake")
 
 
 ////////////////// PROBLEM 4 ////////////////////
@@ -40,10 +48,19 @@ helloWorld()
   Create a function called add that takes in two parameters 
   Inside, convert the arguments to be numbers (just in case strings get sent in)
   The add function should RETURN the two parameters added together.
-  Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
+  Create a variable outside the function called 'sum' and set it equal to add invoked (called), 
+  passing in 2 arguments.
 */
 
-//CODE HERE
+function add(num1, num2) {
+   let convertNum = parseInt(num1, num2)
+    convertNum = (num1 + num2)
+ 
+    return convertNum
+}
+let sum = add(1,4)
+console.log(sum)
+
 
 
 ////////////////// PROBLEM 5 ////////////////////
