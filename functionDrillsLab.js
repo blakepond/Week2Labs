@@ -1,65 +1,65 @@
-////////////////// PROBLEM 1 ////////////////////
-/*
-  Create a function called helloWorld which simply console logs 'Hello, World!'
-  Call the function.
-*/
+// ////////////////// PROBLEM 1 ////////////////////
+// /*
+//   Create a function called helloWorld which simply console logs 'Hello, World!'
+//   Call the function.
+// */
 
-function helloWorld() {
-  console.log("Hello, World!")
-}
-helloWorld()
-
-
-
-////////////////// PROBLEM 2 ////////////////////
-/*
-  Create a function called printName which takes in a person's name and console logs it.
-  Ex. If 'Cameron' were passed in as the argument, Cameron would be console logged.
-  Call the function, passing in an argument.
-*/
-
-function printName() {
-  let name = "Blake"
-  console.log(name)
-}
-printName()
+// function helloWorld() {
+//   console.log("Hello, World!")
+// }
+// helloWorld()
 
 
-////////////////// PROBLEM 3 ////////////////////
-/*
-  Create a function called greeting that
-  accepts name as its only parameter.
-  Convert the name param into a string.
-  greeting should log the string 'Hello, '
-  plus the value of the name parameter.
-  Ex. If Jake were passed in as the argument, the function would log 'Hello, Jake'
-  Make sure to call your function and pass in an argument.
-*/
 
-function greeting(name) {
-  const stringName = String(name)
-  console.log(`Hello, ${stringName}`)
-}
-greeting("Blake")
+// ////////////////// PROBLEM 2 ////////////////////
+// /*
+//   Create a function called printName which takes in a person's name and console logs it.
+//   Ex. If 'Cameron' were passed in as the argument, Cameron would be console logged.
+//   Call the function, passing in an argument.
+// */
+
+// function printName() {
+//   let name = "Blake"
+//   console.log(name)
+// }
+// printName()
 
 
-////////////////// PROBLEM 4 ////////////////////
-/*
-  Create a function called add that takes in two parameters 
-  Inside, convert the arguments to be numbers (just in case strings get sent in)
-  The add function should RETURN the two parameters added together.
-  Create a variable outside the function called 'sum' and set it equal to add invoked (called), 
-  passing in 2 arguments.
-*/
+// ////////////////// PROBLEM 3 ////////////////////
+// /*
+//   Create a function called greeting that
+//   accepts name as its only parameter.
+//   Convert the name param into a string.
+//   greeting should log the string 'Hello, '
+//   plus the value of the name parameter.
+//   Ex. If Jake were passed in as the argument, the function would log 'Hello, Jake'
+//   Make sure to call your function and pass in an argument.
+// */
 
-function add(num1, num2) {
-   let convertNum = parseInt(num1, num2)
-    convertNum = (num1 + num2)
+// function greeting(name) {
+//   const stringName = String(name)
+//   console.log(`Hello, ${stringName}`)
+// }
+// greeting("Blake")
+
+
+// ////////////////// PROBLEM 4 ////////////////////
+// /*
+//   Create a function called add that takes in two parameters 
+//   Inside, convert the arguments to be numbers (just in case strings get sent in)
+//   The add function should RETURN the two parameters added together.
+//   Create a variable outside the function called 'sum' and set it equal to add invoked (called), 
+//   passing in 2 arguments.
+// */
+
+// function add(num1, num2) {
+//    let convertNum = parseInt(num1, num2)
+//     convertNum = (num1 + num2)
  
-    return convertNum
-}
-let sum = add(1,4)
-console.log(sum)
+//     return convertNum
+// }
+// let sum = add(1,4)
+// console.log(sum)
 
 
 
@@ -68,11 +68,22 @@ console.log(sum)
   Write a function called nameCheck that takes in a name parameter.
   nameCheck should check if the name equals 'Steven'. If it does, return 'What is up Steven?'
   If the name parameter is equal to Bryan, return 'Hey Bryan!'
-  If the name parameter is anything else, return 'Cool name, NAMEPARAM' (with NAMEPARAM being the value of the name parameter being passed in).
+  If the name parameter is anything else, return 'Cool name, NAMEPARAM' 
+  (with NAMEPARAM being the value of the name parameter being passed in).
   Create a variable called 'nameGreeting' and set it equal to your function invoked (called) passing in an argument.
 */
 
-//CODE HERE
+function nameCheck(name) {
+  if (name === "Steven") {
+    console.log("what is up Steven?")
+  } else if (name === "Bryan") {
+    console.log("Hey Bryan")
+  } else if (name !== "Steven" || "Bryan") {
+    console.log(`Cool name, ${name}`)
+  }
+  return name
+}
+let nameGreeting = nameCheck("Blake")
 
 
 ////////////////// PROBLEM 6 ////////////////////
@@ -84,8 +95,19 @@ console.log(sum)
   Otherwise, you should return the string 'you need to evaluate your favorite color choice'
   Create a variable called 'colorRating' and set it equal to faveColorFinder invoked (called), passing in an argument.
 */
-
-//CODE HERE
+function faveColorFinder (color) {
+ 
+  if (color === "red") {
+    return ("red is a great color")
+  } else if (color === "green") {
+      return (" green is a colid favorite color")
+    } else if (color === "black") {
+      return (" so trendy")
+    } else 
+    return ("you need to evaluate your favorite color choice")
+}
+let colorRating = faveColorFinder("blue")
+console.log(colorRating)
 
 
 ////////////////// PROBLEM 7 ////////////////////
@@ -96,7 +118,14 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Call the function, passing in the `namesArr` array (above).
 */
 
-//CODE HERE
+function printAllNames(namesArr) {
+  for (i = 0; i < namesArr.length; i++) {
+    console.log(namesArr[i])
+  }
+
+}
+printAllNames(namesArr)
+
 
 
 ////////////////// PROBLEM 8 ////////////////////
@@ -107,7 +136,16 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Outside the function, create a variable called `oddChecker` and set it equal to your function invoked, making sure to pass in an argument.
 */
 
-//CODE HERE
+function thatsOdd(num1) {
+if (num1 % 2 === 0) {
+  return ("That's not odd!")
+} else 
+  return ("That is odd indeed!")
+
+}
+
+let output = thatsOdd(0)
+console.log(output)
 
 
 ////////////////// PROBLEM 9 ////////////////////
