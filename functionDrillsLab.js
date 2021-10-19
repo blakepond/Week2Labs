@@ -204,12 +204,12 @@ let sampleString = "Hi, my name is Kylo."
   Invoke the function, passing in the sampleString (above).
 */
  
-function upperCase(string) {
-  stringUpperCase = string.toUpperCase()
-  return stringUpperCase
+// function upperCase(string) {
+//   stringUpperCase = string.toUpperCase()
+//   return stringUpperCase
 
-}
-console.log (upperCase(sampleString))
+// }
+// console.log (upperCase(sampleString))
 
 
 ////////////////// PROBLEM 12 ////////////////////
@@ -222,31 +222,77 @@ console.log (upperCase(sampleString))
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+const email = "eat@cheese.com   "
+
+function emailCheck (email) {
+  let emailTrim = email.trim()
+    if (emailTrim.includes("@")) {
+      return "email is verified"
+    } else 
+  return ("must provide a valid email address")
+  
+}
+// console.log(emailCheck(email))
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
-  Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
-  Create a variable called `totalFrogs` and set it equal to your function invoked, passing in the amount of gold you are willing to spend.
+  Write a function, naming it whatever you believe to be appropriate, 
+  that buys as many chocolate frogs as possible with a certain amount of gold. 
+  Each chocolate frog costs 3 gold. Your function should take in a single parameter, 
+  which is the amount of gold you are willing to spend. 
+  Your function should return a total amount of chocolate frogs you were able to purchase.
+  Create a variable called `totalFrogs` and set it equal to your function invoked, 
+  passing in the amount of gold you are willing to spend.
 */
+let goldSpent = 10
 
-//CODE HERE
+function chocolateFrogs(goldSpent) {
+    let frogCost = 3
+    let frogsBought = goldSpent / frogCost
+    return frogsBought
+}
+let totalFrogs = chocolateFrogs(goldSpent)
+// console.log(totalFrogs)
 
 
 ////////////////// PROBLEM 14 ////////////////////
 /*
-  You might have noticed a slight bug in problem 12. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in problem 12 (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
+  You might have noticed a slight bug in problem 13. 
+  If you were to pass in 4 gold, the function would return to you 1.3333... 
+  However, you can't really go to a store and by 1.333 products. 
+  You would just be able to purchase 1 product. 
+  Re-write the function you used in problem 12 (give it the same name, just add a 2 to the end of it) that fixes this bug. 
+  Invoke the function and store the returned value to a variable called `totalFrogs2`.
 */
 
-//CODE HERE
+function chocolateFrogs (goldSpent) {
+  let frogCost = 3;
+  frogBought = Math.floor(goldSpent / frogCost);
+  return frogBought
+}
+// console.log(chocolateFrogs(goldSpent));
 
 
 ////////////////// PROBLEM 15 ////////////////////
-let sampleArray = [0,1,2,3,4,7,5,6,8,9]
+let sampleArray = [0,1,2,3,4,2,6]
 /*
-  Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
+  Write a function that takes in an array of numbers as an argument. 
+  In the body of the function, write logic to determine if the array is in ascending order. 
+  The function should return true, if it is sorted in ascending order, false if it is not. 
+  Create a variable, `arrayIsAscending` and set it equal to your function invoked. 
+  Use the sample array to test this function.
 */
 
-//CODE HERE
+function sortNums(arr) {
+  let nextArr = arr.slice(1)
+  for (i = 0; i < arr.length; i++) {
+     if (nextArr[i] > arr[i]) {
+       return true
+  } else {
+        return false
+  }
+} 
+}console.log(sortNums(sampleArray))
 
 
 ////////////////// PROBLEM 16 ////////////////////
